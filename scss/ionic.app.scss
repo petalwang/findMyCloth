@@ -1,0 +1,570 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+$yellow: #E09D00;
+$light-grey: #DDDDDD;
+$dark-grey: #333333;
+$content-bcg: #F2F2F2;
+$white: #fff;
+$transparent: rgba(0, 0, 0, 0);
+$font-stack: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+
+@mixin circle($width){
+	width: $width;
+	height: $width;
+	border-radius: $width;
+}
+
+@mixin title1{
+	font-family: $font-stack;
+	font-size: 25px;
+	line-height: 1.2em;
+	font-weight: 300;
+	color: $white;
+	width: 100%;
+    text-align: center;
+    top: 85px;
+    height: 30px;
+    position: absolute;
+}
+
+@mixin fullSizeBackground($imgLink){
+	background-image: url($imgLink);
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	position: absolute;;
+	top:0;
+	left: 0%;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+@mixin topBar($imgLink){
+	background: 
+	linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url($imgLink);
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+@mixin itemImg($imgLink){
+	background: url($imgLink);
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+@mixin centerDiv{
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  /*transform: translate(-50%, -50%);*/
+}
+
+body{
+	font-size: 16px;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.button{
+	background-color: $transparent !important;
+	color: rgba(255, 255, 255, 0.64);
+}
+
+.round_button{
+    font-size: 17px;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    text-align: center;
+    color: #fff;
+    padding: 30px 0;
+}
+
+
+/******* home.html **********/
+.home_page{
+	@include fullSizeBackground('../img/C1-1.png');
+	color: $white;	
+}
+
+.camera_button_outer{
+	position: relative;
+	margin: 15px auto;
+	@include circle(80px);
+	border: 2px solid white;
+}
+
+.camera_button{
+position: relative;
+margin: 6px;	
+@include circle(64px);
+background-color: $yellow;
+text-align: center;
+	.content{
+	    top: 35%;
+	    height: 30%;
+	    position: relative;
+	    color: $white;
+	}
+}
+
+.button_bottom{
+    bottom: 15px;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+}
+
+/******* photo.html **********/
+.photo_page{
+	@include fullSizeBackground('../img/C1-1.png');
+}
+
+
+.button-right{
+	align-self:center;
+	padding: 15px;
+}
+ion-content img{
+	max-width: 100%;
+}
+
+.close {
+	text-align: center;
+    font-size: 24px;
+    color: $yellow;
+    right: 0px;
+    position: absolute;
+    top: 15px;
+    width: 44px;
+    height: 44px;
+}
+
+.camera_roll {
+    background-color: $white;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-around;
+    padding: 15px 0;
+    font-size: 16px;
+    color: $white;
+    height: 106px;
+}
+
+.thumbnail{
+	width: 48px;
+	height: 48px;
+	border: 1px solid #ddd;
+	margin: auto 0;
+}
+
+.thumbnail img{
+	width: 48px;
+	height: 48px;
+}
+
+.camera_roll .button-right{
+	padding: 0 !important;
+	margin: auto 0;
+}
+
+.camera_roll{
+	color: $dark-grey;
+}
+
+.photo_group_thumbnail{
+	display: flex;
+    width: 500px;
+    .active{
+    	border: 2px solid $yellow;
+    }
+}
+
+ion-scroll.scroll-view{
+	position: absolute;
+	bottom: 106px;
+}
+
+.thumb_ele{
+	width: 80px;
+	height: 80px;
+	background-color: $white;
+	opacity: 0.5;
+	border: 1px solid $white;
+	font-size: 14px;
+	text-align: center;
+    margin: 10px;
+	.thumb_ele_text{
+	    height: 30%;
+	    top: 35%;
+	    position: relative;
+	}
+}
+
+
+/******* category.html **********/
+.category_page{
+	background-color:black
+}
+
+.top_bar{
+	@include topBar('../img/C1-1.png');
+	position: absolute;
+	z-index: -1;
+	height: 200px;
+}
+
+.top_bar .title1{
+	@include title1;
+    left: 0;
+}
+
+.category_grid{
+	color: $dark-grey;
+	top:200px;
+    position: relative;
+    background-color: $content-bcg;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.tab_header{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    color: $dark-grey;
+}
+
+.fixed-header{
+	position: fixed;
+	top:10px;
+	width: 100%;
+	height: 30px;
+	background-color: red;
+}
+
+.scrollTop {
+	position: absolute;
+	top: 0px;
+	transition: all .85s ease-in-out;
+}
+
+.scrollDown{
+	transform: scale(1.1);
+	top:-200px;
+	transition: all .95s ease-in-out;
+
+}
+.category_grid .tab{
+	position: relative;
+	top: 0;
+}
+.cagetegory_tab{
+	position: fixed;
+	top:0;
+}
+.tab_content{
+	background-color: #F2F2F2;
+	overflow-y:scroll;
+	flex-wrap: wrap;
+	padding-top:40px;
+	justify-content: center;
+}
+.cat_ele{
+	height: 130px;
+	border: 1px solid rgba(221, 221, 221, 0.52);
+	max-width: 31%;
+	margin:3px;
+	flex: 0 0 31%;
+	background-color: $white;
+    text-align: center;
+    font-size: 14px;
+    color: $dark-grey;
+}
+
+.cat_ele a{
+	color: $dark-grey;
+}
+
+.cat_ele_img{
+	padding: 5px 0;
+}
+
+.cat_ele_img img{
+	height: 90px;
+}
+
+.tab_header > .tab-item{
+    padding: 10px 5px;
+}
+
+.tab-item.active {
+	text-decoration: underline;
+}
+.btn{
+	font-weight: 300;
+    padding: 10px;
+    font-size: 14px;
+}
+.btn a{
+	color: $yellow;
+	font-weight: 400;
+    font-size: 14px;
+}
+
+/******* loading.html **********/
+.loading_page{
+	background: 
+	linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url('../img/C1-1.png');
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	position: absolute;;
+	top:0;
+	left: 0%;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.wrapper{
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.loading {
+    @include centerDiv;
+    border-radius: 240px;
+    width: 440px;
+    height: 440px;
+    border: 100px solid rgba(255,255,255,0.09);
+    margin: -220px 0 0 -220px;
+}
+
+.loading_page .text {
+	padding-top: 55px;
+	font-weight: 200;
+	text-align: center;
+	font-size: 25px;
+	color: #FFF;
+	width: 240px;
+	height: 240px;
+	line-height: 1.2em;
+	border-radius: 240px;
+    background-color: rgba(255,255,255,0.12);
+    @include centerDiv;
+     transform: translate(-50%, -50%);
+}
+
+.circle {
+  background: #bf1e2c;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.loading{
+  -webkit-animation:grow 2s infinite;
+}
+
+@-webkit-keyframes grow {
+ 0% {
+-webkit-transform: scale( 0.8);-moz-transform: scale( 0.8);-o-transform: scale( 0.8);-ms-transform: scale( 0.8);transform: scale( 0.8);
+  }
+  
+  50% {
+  -webkit-transform: scale( 1 );-moz-transform: scale( 1);-o-transform: scale( 1 );-ms-transform: scale( 1);transform: scale( 1 );
+  }
+  
+  100% {
+  -webkit-transform: scale( 0.8);-moz-transform: scale( 0.8);-o-transform: scale( 0.8);-ms-transform: scale( 0.8);transform: scale( 0.8);
+  }
+}
+
+/********** srp.html *************/
+.srp_page .tab_header{
+	justify-content:space-between;
+}
+
+.btn_right, .btn_left{
+	padding: 10px 15px;
+    display: flex;
+}
+
+.btn_right > .btn_link{
+	color: $yellow;
+	padding: 0 10px;
+}
+
+.srp_page .cat_ele{
+	height: 283px;
+	max-width: 48%;
+    flex: 0 0 48%;
+}
+
+.srp_page .cat_ele img{
+	height: 190px;
+}
+
+.srp_page .cat_ele_img{
+	padding: 8px 0;
+}
+
+.item_title{
+	font-size: 14px;
+    line-height: 1.2em;
+    padding: 0 8px;
+    text-align: left;
+    color: $dark-grey;
+}
+.item_price{
+    padding: 5px 8px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+/******** refine.html ********/
+.refine_page .bar-header{
+	border-bottom: 1px solid $light-grey;
+}
+.refine_page .tab_header{
+	top:45px;
+}
+
+.refine_page .list_content{
+    position: absolute;
+    top: 90px;
+    bottom: 32px;
+    width: 100%;
+}
+
+.lists {
+	margin: 16px;
+}
+
+.lists > li{
+	margin: 16px;
+    color: $dark-grey;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+.refine_page .button-outline{
+	color: $yellow !important;
+}
+
+.refine_page .default{
+	color: $white;
+	background-color: $yellow !important;
+}
+
+/********** viewitem.html **********/
+
+.item_img_1{
+ @include itemImg('../img/item1.png');
+ height: 400px;
+}
+
+.item_img_2{
+ @include itemImg('../img/item2.png');
+ height: 400px;
+}
+.item_img_3{
+ @include itemImg('../img/item3.png');
+ height: 400px;
+}
+
+.item_page .btn a{
+	color: $yellow;
+	opacity: 1;
+}
+
+.item_page .item_til{
+	margin: 8px 16px;
+    font-size: 25px;
+    line-height: 1.2em;
+}
+
+.item_site{
+    font-weight: 300;
+    padding: 8px;
+    margin: 0 16px;
+    font-size: 12px;
+}
+
+.item_pri{
+    padding:0 8px;
+    margin: 0 16px;
+    font-size: 25px;
+}
+
+.item_shipping{
+   font-weight: 300;
+    padding: 16px 0px;
+    margin: 16px 24px;
+    font-size: 14px;
+    border-top: 1px solid $light-grey;
+}
+
+.buy_btn{
+	font-size: 17px;
+    padding: 40px 30px;
+    border-radius: 160px;
+    color: $white;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    right: -80px;
+    bottom: -80px;
+    background: $yellow;
+}
+

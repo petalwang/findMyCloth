@@ -1,0 +1,32 @@
+<ion-view class="srp_page">
+<div>
+	<div class="top_bar item_top_bar">
+		<div class="btn"> <a ng-href="#/category">Go back</a></div>
+		<div class="title1">Best Matches</div>
+	</div>
+
+	<ion-scroll class="category_grid item_grid" on-scroll="getScrollPosition()" direction='y'>
+		<div class="tab_header">
+		  <div class="btn_left">16 items</div>
+
+		  <div class="btn_right">
+			  <div class="btn_link">Sort</div>
+			  <div class="btn_link" ng-click="openModal()">Refine</div>
+		</div>
+		</div>
+
+		<div class="tab_content row"> 
+			<div class="col-50 cat_ele" ng-repeat = "item in matchResults">
+				<a ng-href="#/item">
+				<div class="cat_ele_img">
+					<img ng-src={{item.url}} alt="category image">
+				</div>
+				<div class="item_title">{{item.name}}</div>
+				<div class="item_price">${{item.price}}</div>
+				</a>
+			</div>
+		</div>
+</ion-scroll>
+</div>
+
+</ion-view>

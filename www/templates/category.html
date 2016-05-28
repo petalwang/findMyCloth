@@ -1,0 +1,27 @@
+<ion-view class="category_page">
+<div>
+	<div class="top_bar cat_bar">
+		<div class="btn"> <a ng-href="#/app">Go back</a></div>
+		<div class="title1">Lets select a category</div>
+	</div>
+
+	<ion-scroll class="category_grid cat_grid" on-scroll="getScrollPosition()" direction='y'>
+		<div class="tab_header">
+		  
+		  <div class="tab-item" ng-repeat="tab in tabs" 
+		  ng-class="{active: isActiveTab(tab.url)}" class="tab-item"
+		  ng-click="onClickTab(tab)">
+		    {{tab.title}}
+		  </div>
+		</div>
+
+		<div class="tab_content row" id="tab_view" ng-include="currentTab"> 
+		
+		</div>
+</ion-scroll>
+</div>
+
+      
+</ion-view>
+
+

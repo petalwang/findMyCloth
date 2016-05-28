@@ -1,0 +1,72 @@
+
+[
+	{
+		"id":"1",
+		"name":"Women",
+		"category":[
+			{"name" : "Dresses", "url": "img/dress.png"},
+			{"name" : "Jack", "url": "img/jacket.png"},
+			{"name" : "Pants", "url": "img/pants.png"},
+			{"name" : "Lingerie", "url": "img/lingerie.png"},
+			{"name" : "Tops", "url": "img/tops.png"},
+			{"name" : "Workout", "url": "img/workout.png"},
+			{"name" : "Swimsuits", "url": "img/swimsuits.png"},
+			{"name" : "Skirts", "url": "img/skirts.png"},
+			{"name" : "Tops", "url": "img/tops.png"},
+			{"name" : "Wedges", "url": "img/wedges.png"},
+			{"name" : "Flats", "url": "img/flats.png"},
+			{"name" : "Pumps", "url": "img/pumps.png"}
+		]
+
+	},
+
+	{
+		"id":"2",
+		"name":"Men",
+		"category":[
+			{"name" : "Coats", "url": "img/m_coats.png"},
+			{"name" : "Polos", "url": "img/m_polos.png"},
+			{"name" : "Shirts", "url": "img/m_shirt.png"},
+			{"name" : "Sneakers", "url": "img/m_sneakers.png"},
+			{"name" : "Jeans", "url": "img/m_jeans.png"},
+			{"name" : "Belts", "url": "img/m_belts.png"},
+			{"name" : "Dress shoes", "url": "img/m_shoes.png"},
+			{"name" : "Pants", "url": "img/m_pants.png"},
+			{"name" : "Watches", "url": "img/m_watches.png"}
+		]
+
+	},
+	{
+		"id":"3",
+		"name":"Accessories",
+		"category":[
+			{"name" : "Bracelets", "url": "img/a.1.png"},
+			{"name" : "Earrings", "url": "img/a.2.png"},
+			{"name" : "Necklaces", "url": "img/a.3.png"},
+			{"name" : "Rings", "url": "img/a.4.png"},
+			{"name" : "Sunglasses", "url": "img/a.5.png"},
+			{"name" : "Scarves", "url": "img/a.6.png"},
+			{"name" : "Fine Jewelry", "url": "img/a.7.png"},
+			{"name" : "Watches", "url": "img/a.8.png"},
+			{"name" : "Watches", "url": "img/m_watches.png"}
+		]
+
+	},
+	{
+		"id":"4",
+		"name":"Kids",
+		"category":[
+			{"name" : "Newborn", "url": "img/k1.png"},
+			{"name" : "Baby Boy 0-24", "url": "img/k2.png"},
+			{"name" : "Baby Girl 0-24", "url": "img/k3.png"},
+			{"name" : "Boy 2-7", "url": "img/k4.png"},
+			{"name" : "Girl 2-7", "url": "img/k5.png"},
+			{"name" : "Boy", "url": "img/k6.png"},
+			{"name" : "Baby shoes", "url": "img/k7.png"},
+			{"name" : "Boy shoes", "url": "img/k8.png"},
+			{"name" : "Girl shoes", "url": "img/k9.png"}
+		]
+
+	}
+
+]

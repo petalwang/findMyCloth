@@ -1,0 +1,35 @@
+<ion-modal-view class="refine_page">
+	<div class="bar bar-header bar-light">
+		<button class="button button-outline" ng-click="closeModal()">Cancel</button>
+		<h1 class="title">Refine</h1>
+		<button class="button default">Apply</button>
+
+	</div>
+
+  
+      <div class="tab_header">
+		  <div class="tab-item active">
+		    Brand
+		  </div>
+		  <div class="tab-item">
+		    Price
+		  </div>
+		  <div class="tab-item">
+		    Color
+		  </div>
+		  <div class="tab-item">
+		    Size
+		  </div>
+		</div>
+
+
+		<ion-scroll  class="list_content" direction="y" zooming="false"> 
+			<ul class="lists">
+				<li class="item_list" ng-repeat="list in brandList" ng-click="closeModal()">
+					{{list.name}}
+				</li>
+			</ul>
+		
+		</ion-scroll >
+ 
+  </ion-modal-view>
